@@ -11,6 +11,7 @@ Item {
     }
 
     property alias battery: battery
+    readonly property var percentage: battery.percentage
 
     Rectangle {
         width: 150
