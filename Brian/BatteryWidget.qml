@@ -36,7 +36,7 @@ Item {
 
         Rectangle {
             width: 110
-            height: (parent.height -36) * (battery.percentage / 100)
+            height: (parent.height - 36) * (battery.percentage / 100)
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 18
             anchors.horizontalCenter: parent.horizontalCenter
