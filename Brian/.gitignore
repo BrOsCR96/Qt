@@ -1,0 +1,65 @@
+# Qt project files
+*.pro.user
+*.pro.user.*
+
+# Qt Creator temporary files
+*.qtc.user
+*.qtc.user.*
+
+# Build directory (you can specify the build directory if you use a specific folder, e.g., build-*)
+build-*/
+
+# Compiled object files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# Compiled application files
+*.exe
+*.out
+
+# MOC (Meta-Object Compiler) files
+moc_*
+
+# UIC (User Interface Compiler) files
+ui_*
+
+# RCC (Resource Compiler) files
+qrc_*
+
+# Generated files by Qt
+*.qmake.stash
+*.qmake.cache
+
+# Debug and Release folders
+/debug/
+*/debug/
+*/release/
+
+# User settings for Qt Creator or QMake
+*.user
+*.user.*
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+CMakeLists.txt.user
+Makefile
+
+# Temporary files created by the system
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.bak
+
+# IDE or text editor specific
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
