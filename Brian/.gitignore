@@ -39,6 +39,7 @@ qrc_*
 /debug/
 */debug/
 */release/
+build
 
 # User settings for Qt Creator or QMake
 *.user

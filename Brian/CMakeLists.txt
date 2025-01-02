@@ -6,6 +6,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Quick)
 
+# Buscar automáticamente los archivos fuente .cpp y .h
+file(GLOB_RECURSE CPP_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
+file(GLOB_RECURSE HEADER_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.h")
+
+# Buscar automáticamente archivos QML con rutas relativas
+file(GLOB_RECURSE QML_SOURCES
+    RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+    "${CMAKE_CURRENT_SOURCE_DIR}/qml/*.qml"
+)
+
 qt_standard_project_setup(REQUIRES 6.5)
 
 qt_add_executable(appBrian
@@ -15,10 +25,11 @@ qt_add_executable(appBrian
 qt_add_qml_module(appBrian
     URI Brian
     VERSION 1.0
+    SOURCES
+        ${CPP_SOURCES}
+        ${HEADER_SOURCES}
     QML_FILES
-        Main.qml
-        SOURCES battery.h battery.cpp
-        QML_FILES BatteryWidget.qml
+        ${QML_SOURCES}
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

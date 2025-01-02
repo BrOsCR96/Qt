@@ -1,7 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-#include "Battery.h"
+#include "./src/Battery.h"
 
 int main(int argc, char *argv[])
 {

@@ -1,9 +1,9 @@
 import QtQuick
-import QtQuick.Controls 2.15
-
+import QtQuick.Controls
+import "./Widgets"
 Window {
-    width: 640
-    height: 480
+    width: 1500
+    height: 750
     visible: true
     title: qsTr("Battery Level")
 
@@ -21,10 +21,11 @@ Window {
         anchors.fill: parent
         focus: true
 
-        BatteryWidget {
+        Battery {
             id: batteryWidget
             anchors.centerIn: parent
             onPercentageChanged: slider.value = batteryWidget.percentage
+            scale: 0.5
         }
 
         Slider {
